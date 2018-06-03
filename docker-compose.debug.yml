@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  neuro-backend:
+    image: neuro-backend
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 6100:6100
+      - 9229:9229
+    ## set your startup file here
+    command: npm run dev:start

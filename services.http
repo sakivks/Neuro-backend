@@ -1,0 +1,27 @@
+POST http://192.168.99.100:6100/public/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "user":{
+        "name":"docker2",
+        "email":"abc@mno.com",
+        "password":"abc"
+    }
+}
+
+###
+POST http://localhost:6100/public/api/users/authenticate HTTP/1.1
+content-type: application/json
+
+{
+    "user":{
+        "name":"sakiv",
+        "email":"abc@mno.com",
+        "password":"abc"
+    }
+}
+
+
+###
+GET http://localhost:6100/health-check HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDg1OWRkOGJmNDU2MzE4YTIwODZkYiIsImlhdCI6MTUyNzI3NDQxMywiZXhwIjoxNjEzNjc0NDEzfQ.qKfCbpCn38L66X1GySfVxEj9u6gpx0mR7gT6caMCy4o

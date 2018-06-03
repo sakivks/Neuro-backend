@@ -1,11 +1,11 @@
 {
-  "name": "koa-mongo-boilerplate",
+  "name": "Neuro-backend",
   "version": "0.1.0",
   "private": false,
   "scripts": {
     "start": "export HOST=0.0.0.0; PORT=6100 node ./bin/www",
     "prod:start": "export NODE_ENV=production; PORT=6100 nodemon ./bin/www",
-    "dev:start": "export NODE_ENV=development; PORT=6100 nodemon ./bin/www",
+    "dev:start": "export NODE_ENV=development; PORT=6100 node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf public/* && webpack -p",
     "dev:build": "export NODE_ENV=development; npm run build",
@@ -21,7 +21,7 @@
     "taskDebug": "node --inspect --debug-brk ./server/tasks/taskRunner"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3",
+    "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.1",
     "debug": "~2.6.9",
     "dotenv": "^5.0.0",
