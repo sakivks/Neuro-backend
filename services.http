@@ -1,27 +1,26 @@
-POST http://192.168.99.100:6100/public/api/users HTTP/1.1
+POST https://neurobackend.herokuapp.com/public/api/users HTTP/1.1
 content-type: application/json
 
 {
     "user":{
-        "name":"docker2",
-        "email":"abc@mno.com",
-        "password":"abc"
+        "name":"test",
+        "email":"test@test.com",
+        "password":"test"
     }
 }
 
 ###
-POST http://localhost:6100/public/api/users/authenticate HTTP/1.1
+POST http://neurobackend.herokuapp.com/public/api/users/authenticate HTTP/1.1
 content-type: application/json
 
 {
     "user":{
-        "name":"sakiv",
-        "email":"abc@mno.com",
-        "password":"abc"
+        "email":"test@test.com",
+        "password":"test"
     }
 }
 
 
 ###
-GET https://neurobackend.herokuapp.com/health-check HTTP/1.1
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDg1OWRkOGJmNDU2MzE4YTIwODZkYiIsImlhdCI6MTUyNzI3NDQxMywiZXhwIjoxNjEzNjc0NDEzfQ.qKfCbpCn38L66X1GySfVxEj9u6gpx0mR7gT6caMCy4o
+GET http://neurobackend.herokuapp.com/health-check HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMTQyZDVjM2M2MjQ2MDA0MmFhOWM0ZiIsImlhdCI6MTUyODA2NDc3NCwiZXhwIjoxNjE0NDY0Nzc0fQ.odu8q2npTCARoaLhXS3efWOUJc_CbCReHzRTwjtrSpM

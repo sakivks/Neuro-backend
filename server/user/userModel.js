@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const userSchema = new MONGOOSE.Schema({
     name: String,
     email: String,
+    isLawFirm: Boolean,
     password: String
 }, {
         timestamps: true
