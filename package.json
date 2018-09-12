@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "prod:start": "export NODE_ENV=production; PORT=6100 nodemon ./bin/www",
-    "dev:start": "export NODE_ENV=development; PORT=6100 node ./bin/www",
+    "dev:start": "export NODE_ENV=development; PORT=6200 node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf public/* && webpack -p",
     "dev:build": "export NODE_ENV=development; npm run build",

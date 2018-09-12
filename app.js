@@ -50,8 +50,8 @@ app.use(respond());
 app.use(morgan('dev'))
 
 // Add auth middleware with unless
-customMiddleware.authenticate.unless = unless
-app.use(customMiddleware.authenticate.unless({ path: [/^\/public/] }));
+// customMiddleware.authenticate.unless = unless
+// app.use(customMiddleware.authenticate.unless({ path: [/^\/public/] }));
 
 // // support different functions for different pages on the server
 // app.use(router.routes())

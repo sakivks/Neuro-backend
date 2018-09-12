@@ -1,11 +1,13 @@
-POST https://neurobackend.herokuapp.com/public/api/users HTTP/1.1
+GET http://localhost:6200/api/users HTTP/1.1
+
+###
+POST http://localhost:6200/api/users/user/new HTTP/1.1
 content-type: application/json
 
 {
     "user":{
-        "name":"test",
-        "email":"test@test.com",
-        "password":"test"
+        "name":"user3",
+        "flat":"203"
     }
 }
 
@@ -15,7 +17,7 @@ content-type: application/json
 
 {
     "user":{
-        "email":"test@test.com",
+        "email":"c1@test.com",
         "password":"test"
     }
 }

@@ -1,18 +1,20 @@
-'use strict';
+"use strict";
 
-const Router = require('koa-router');
+const Router = require("koa-router");
 const router = new Router({
-	prefix: '/api/users'
+  prefix: "/api/users"
 });
 
 const publicRouter = new Router({
-	prefix: '/public/api/users'
+  prefix: "/public/api/users"
 });
 
-const userController = require('./userController');
+const userController = require("./userController");
 
-publicRouter.post('/', userController.createUser);
+router.get("/", userController.listUsers);
 
-publicRouter.post('/authenticate', userController.authenticate);
+router.post("/user/new", userController.createUser);
 
-module.exports = {router, publicRouter};
+router.post("/authenticate", userController.authenticate);
+
+module.exports = { router, publicRouter };
