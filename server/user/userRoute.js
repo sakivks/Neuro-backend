@@ -13,7 +13,13 @@ const userController = require("./userController");
 
 router.get("/", userController.listUsers);
 
-router.post("/user/new", userController.createUser);
+router.get("/top", userController.listTopUsers);
+
+router.get("/top/:count", userController.listTopUsers);
+
+router.post("/user", userController.createUser);
+
+router.put("/user/:userId", userController.updateUser);
 
 router.post("/authenticate", userController.authenticate);
 

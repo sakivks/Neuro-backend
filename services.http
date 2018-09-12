@@ -1,13 +1,33 @@
 GET http://localhost:6200/api/users HTTP/1.1
 
+
 ###
-POST http://localhost:6200/api/users/user/new HTTP/1.1
+GET http://localhost:6200/api/users/top HTTP/1.1
+
+
+###
+GET http://localhost:6200/api/users/top/3 HTTP/1.1
+
+###
+POST http://localhost:6200/api/users/user HTTP/1.1
 content-type: application/json
 
 {
     "user":{
         "name":"user3",
         "flat":"203"
+    }
+}
+
+###
+PUT http://localhost:6200/api/users/user/5b9956e73a343e6a0e052bd8 HTTP/1.1
+content-type: application/json
+
+{
+    "user":{
+        "name":"user3_new",
+        "flat":"203",
+        "score":30
     }
 }
 
