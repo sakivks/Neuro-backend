@@ -24,6 +24,13 @@ module.exports = {
   async listUsers(ctx) {
     let response = new RESPONSE_MESSAGE.GenericSuccessMessage();
     response.data = await userService.listUsers();
+    await userService.stats();
+    RESPONSE_HELPER({ ctx, response });
+  },
+
+  async stats(ctx) {
+    let response = new RESPONSE_MESSAGE.GenericSuccessMessage();
+    response.data = await userService.stats();
     RESPONSE_HELPER({ ctx, response });
   },
 

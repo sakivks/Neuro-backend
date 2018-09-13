@@ -25,6 +25,19 @@ module.exports = {
     return user.save();
   },
 
+  async stats() {
+    let count = await UserModel.aggregate([
+      {
+        $group: {
+          _id: null,
+          totalScore: { $sum: "$score" },
+          totalUser: { $sum: 1 }
+        }
+      }
+    ]).exec();
+    return count;
+  },
+
   async authenticate(params) {
     const user = await UserModel.findOne({ email: params.user.email })
       .lean()

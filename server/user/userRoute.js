@@ -15,6 +15,8 @@ router.get("/", userController.listUsers);
 
 router.get("/top", userController.listTopUsers);
 
+router.get("/stats", userController.stats);
+
 router.get("/top/:count", userController.listTopUsers);
 
 router.post("/user", userController.createUser);
