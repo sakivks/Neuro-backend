@@ -1,9 +1,10 @@
 GET http://localhost:6200/api/users HTTP/1.1
 
+###
+GET http://localhost:6200/api/users/stats HTTP/1.1
 
 ###
 GET http://localhost:6200/api/users/top HTTP/1.1
-
 
 ###
 GET http://localhost:6200/api/users/top/3 HTTP/1.1
@@ -14,22 +15,27 @@ content-type: application/json
 
 {
     "user":{
-        "name":"user3",
-        "flat":"203"
+        "name":"Anshul2",
+        "flat":"t101"
     }
 }
 
 ###
-PUT http://localhost:6200/api/users/user/5b9956e73a343e6a0e052bd8 HTTP/1.1
+PUT http://localhost:6200/api/users/user/t101 HTTP/1.1
 content-type: application/json
 
 {
     "user":{
-        "name":"user3_new",
+        "name":"Anshul_new",
         "flat":"203",
         "score":30
     }
 }
+
+###
+GET http://localhost:6200/api/users/user/t101 HTTP/1.1
+content-type: application/json
+
 
 ###
 POST http://neurobackend.herokuapp.com/public/api/users/authenticate HTTP/1.1

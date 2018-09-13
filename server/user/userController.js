@@ -12,19 +12,25 @@ module.exports = {
 
   async updateUser(ctx) {
     let response = new RESPONSE_MESSAGE.GenericSuccessMessage();
-    const { userId: _id } = ctx.params;
+    const { userId: flat } = ctx.params;
     const user = _.get(ctx, `request.body.user`);
     response.data = await userService.updateUser({
-      query: { _id },
+      query: { flat },
       update: user
     });
+    RESPONSE_HELPER({ ctx, response });
+  },
+
+  async getUser(ctx) {
+    let response = new RESPONSE_MESSAGE.GenericSuccessMessage();
+    const { flatId: flat } = ctx.params;
+    response.data = await userService.getUserbyFlatId(flat);
     RESPONSE_HELPER({ ctx, response });
   },
 
   async listUsers(ctx) {
     let response = new RESPONSE_MESSAGE.GenericSuccessMessage();
     response.data = await userService.listUsers();
-    await userService.stats();
     RESPONSE_HELPER({ ctx, response });
   },
 

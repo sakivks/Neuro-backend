@@ -11,6 +11,10 @@ module.exports = {
     return UserModel.find().exec();
   },
 
+  async getUserbyFlatId(flat) {
+    return UserModel.find({ flat }).exec();
+  },
+
   async listTopUsers(count = 10) {
     return UserModel.find()
       .sort([["score", -1]])

@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const userSchema = new MONGOOSE.Schema(
   {
     name: String,
-    flat: String,
+    flat: { unique: true, type: String },
     score: { type: Number, default: 0 }
   },
   {

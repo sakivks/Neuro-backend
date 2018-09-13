@@ -23,6 +23,8 @@ router.post("/user", userController.createUser);
 
 router.put("/user/:userId", userController.updateUser);
 
+router.get("/user/:flatId", userController.getUser);
+
 router.post("/authenticate", userController.authenticate);
 
 module.exports = { router, publicRouter };
